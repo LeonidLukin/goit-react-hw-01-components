@@ -1,40 +1,38 @@
-import Stats from 'components/Stats/Stats';
-import UserData from 'components/UserData/UserData';
-import user from 'user.json'
-import Avatar from "../Avatar/Avatar";
-import css from './App.module.css'
+import user from 'data/user.json'
+import dataStatisctic from 'data/data.json'
+import friends from 'data/friends.json'
+import transactions from 'data/transactions.json'
+
+import Profile from 'components/Profile/Profile';
+import SectionStatictic from 'components/SectionStatistic/SectionStatistic';
+import FriendsList from 'components/FriendsList/FriendsList';
+import TransactionHistory from 'components/TransactionHistory/TransactionHistory';
+
+
+// import css from './App.module.css'
 
 const App = () => {
   return (
-    <div className={css.profile}
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      <div className="description">
-        <Avatar
-          avatar={user.avatar}
-          username={user.username}
-        />
-        <UserData
-          username={user.username}
-          tag={user.tag}
-          location={user.location}
-        />
-      </div>
+    <div>
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
 
-      <ul className="stats">
-        <Stats
-          followers={user.stats.followers}
-          views={user.stats.views}
-          likes={user.stats.likes}
-        />
-      </ul>
+      <SectionStatictic
+        stats={dataStatisctic}
+      />
+
+      <FriendsList
+        friends={friends}
+      />
+
+      <TransactionHistory
+        transactions={transactions}
+      />
     </div>
   );
 };
