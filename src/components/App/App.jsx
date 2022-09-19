@@ -3,10 +3,10 @@ import dataStatisctic from 'data/data.json'
 import friends from 'data/friends.json'
 import transactions from 'data/transactions.json'
 
-import Profile from 'components/Profile/Profile';
-import SectionStatictic from 'components/SectionStatistic/SectionStatistic';
-import FriendsList from 'components/FriendsList/FriendsList';
-import TransactionHistory from 'components/TransactionHistory/TransactionHistory';
+import Profile from '../Profile/Profile';
+import SectionStatictic from '../SectionStatistic/SectionStatistic';
+import FriendsList from '../FriendsList/FriendsList';
+import TransactionHistory from '../TransactionHistory/TransactionHistory';
 
 
 // import css from './App.module.css'
